@@ -23,10 +23,10 @@ def detectText(img):
         )
     return df['description'][0]
 
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = r'/mnt/96E070D5E070BD55/Code/Google API/VisionAPIDemo/ServiceAccountToken.json' #de path file json cua may nha!!!!!
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = r'/media/tuminh14/New Volume/Final Project/FE_CREDIT_FINAL/VisionAPIDemo/ServiceAccountToken.json' #de path file json cua may nha!!!!!
 
 client = vision.ImageAnnotatorClient()
 
-FILE_NAME = 'OCR.png'
-FOLDER_PATH = r'/mnt/96E070D5E070BD55/Code/Google API/'
+FILE_NAME = 'tung_cmnd.jpg'
+FOLDER_PATH = r'/media/tuminh14/New Volume/Final Project/Data/CMND/'
 print(detectText(os.path.join(FOLDER_PATH, FILE_NAME)))
