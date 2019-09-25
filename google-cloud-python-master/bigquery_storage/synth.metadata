@@ -1,0 +1,39 @@
+{
+  "updateTime": "2019-08-21T23:20:45.275738Z",
+  "sources": [
+    {
+      "generator": {
+        "name": "artman",
+        "version": "0.34.0",
+        "dockerImage": "googleapis/artman@sha256:38a27ba6245f96c3e86df7acb2ebcc33b4f186d9e475efe2d64303aec3d4e0ea"
+      }
+    },
+    {
+      "git": {
+        "name": "googleapis",
+        "remote": "git@github.com:googleapis/googleapis.git",
+        "sha": "92bebf78345af8b2d3585220527115bda8bdedf8",
+        "internalRef": "264715111"
+      }
+    },
+    {
+      "template": {
+        "name": "python_library",
+        "origin": "synthtool.gcp",
+        "version": "2019.5.2"
+      }
+    }
+  ],
+  "destinations": [
+    {
+      "client": {
+        "source": "googleapis",
+        "apiName": "bigquery_storage",
+        "apiVersion": "v1beta1",
+        "language": "python",
+        "generator": "gapic",
+        "config": "google/cloud/bigquery/storage/artman_bigquerystorage_v1beta1.yaml"
+      }
+    }
+  ]
+}

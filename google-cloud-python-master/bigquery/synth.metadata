@@ -1,0 +1,32 @@
+{
+  "updateTime": "2019-09-12T14:51:08.578469Z",
+  "sources": [
+    {
+      "generator": {
+        "name": "artman",
+        "version": "0.36.2",
+        "dockerImage": "googleapis/artman@sha256:0e6f3a668cd68afc768ecbe08817cf6e56a0e64fcbdb1c58c3b97492d12418a1"
+      }
+    },
+    {
+      "git": {
+        "name": "googleapis",
+        "remote": "https://github.com/googleapis/googleapis.git",
+        "sha": "1cb29d0fd49437d8e5d7de327e258739e998f01c",
+        "internalRef": "268598527"
+      }
+    }
+  ],
+  "destinations": [
+    {
+      "client": {
+        "source": "googleapis",
+        "apiName": "bigquery",
+        "apiVersion": "v2",
+        "language": "python",
+        "generator": "gapic",
+        "config": "google/cloud/bigquery/artman_bigquery_v2.yaml"
+      }
+    }
+  ]
+}
