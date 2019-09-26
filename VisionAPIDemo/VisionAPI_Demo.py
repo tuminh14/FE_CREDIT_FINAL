@@ -1,8 +1,11 @@
 import os, io
+from firebase import firebase
 from google.cloud import vision
 from google.cloud.vision import types
 import pandas as pd
 import json
+
+firebase = firebase.FirebaseApplication("https://cccc-d1f67.firebaseio.com/", None)
 
 def detectText(img):
     with io.open(img,'rb') as image_file:
@@ -29,4 +32,8 @@ client = vision.ImageAnnotatorClient()
 
 FILE_NAME = 'tung_cmnd.jpg'
 FOLDER_PATH = r'/media/tuminh14/New Volume/Final Project/Data/CMND/'
-print(detectText(os.path.join(FOLDER_PATH, FILE_NAME)))
+data = detectText(os.path.join(FOLDER_PATH, FILE_NAME))
+result = firebase.post('/cccc-d1f67/Customer', data)
+
+receive = firebase.get('/cccc-d1f67/Customer', '')
+print(receive)
